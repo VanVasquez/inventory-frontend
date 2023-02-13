@@ -13,7 +13,6 @@ import UpdateInventory from "./scenes/UpdateInventory";
 import { ColorModeContext, useMode } from "./Theme";
 import Sidebar from "./components/SideBar";
 import Topbar from "./components/TopBar";
-
 function App() {
   const [theme, colorMode] = useMode();
   return (

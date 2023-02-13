@@ -104,6 +104,7 @@ const Register = () => {
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
+                    color="secondary"
                     autoComplete="given-name"
                     name="firstName"
                     required
@@ -115,6 +116,7 @@ const Register = () => {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
+                    color="secondary"
                     required
                     fullWidth
                     id="lastName"
@@ -125,6 +127,7 @@ const Register = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
+                    color="secondary"
                     required
                     fullWidth
                     id="email"
@@ -135,6 +138,7 @@ const Register = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
+                    color="secondary"
                     required
                     fullWidth
                     name="password"
@@ -146,6 +150,7 @@ const Register = () => {
                 </Grid>{" "}
                 <Grid item xs={12}>
                   <TextField
+                    color="secondary"
                     required
                     fullWidth
                     name="confirm-password"
@@ -157,9 +162,12 @@ const Register = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <FormControl fullWidth>
-                    <InputLabel id="select-label">Role</InputLabel>
+                    <InputLabel id="select-label" color="secondary">
+                      Role
+                    </InputLabel>
                     <Select
                       labelId="select-label"
+                      color="secondary"
                       name="role"
                       id="role"
                       value={role}

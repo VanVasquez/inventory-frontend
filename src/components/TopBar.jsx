@@ -39,7 +39,7 @@ const Topbar = () => {
       <Box>
         {users.map((user) => {
           return (
-            <div>
+            <div key={user.id}>
               {" "}
               {currentUser.email === user.email
                 ? user.firstName + " " + user.lastName

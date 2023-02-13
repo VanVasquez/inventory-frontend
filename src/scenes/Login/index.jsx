@@ -80,6 +80,7 @@ const LogIn = () => {
             sx={{ mt: 1 }}
           >
             <TextField
+              color="secondary"
               margin="normal"
               required
               fullWidth
@@ -91,6 +92,7 @@ const LogIn = () => {
               autoFocus
             />
             <TextField
+              color="secondary"
               margin="normal"
               required
               fullWidth

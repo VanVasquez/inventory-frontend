@@ -97,7 +97,7 @@ const Sidebar = ({ selectedd }) => {
                   <Typography variant="h3" color={colors.grey[100]}>
                     {users.map((user) => {
                       return (
-                        <div>
+                        <div key={user.id}>
                           {" "}
                           {currentUser.email === user.email
                             ? " Hi, " + user.lastName
@@ -125,7 +125,7 @@ const Sidebar = ({ selectedd }) => {
               />{" "}
               {users.map((user) => {
                 return (
-                  <div>
+                  <div key={user.id}>
                     {" "}
                     {currentUser.email === user.email ? (
                       user.role === "Admin" ? (
@@ -168,7 +168,7 @@ const Sidebar = ({ selectedd }) => {
               />
               {users.map((user) => {
                 return (
-                  <div>
+                  <div key={user.id}>
                     {" "}
                     {currentUser.email === user.email ? (
                       user.role === "Admin" ? (

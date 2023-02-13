@@ -17,7 +17,7 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
   const userCollectionRef = collection(db, "accounts");
-  const itemCollectionRef = collection(db, "inventory");
+  const categoryCollectionRef = collection(db, "categories");
 
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
@@ -54,8 +54,13 @@ export const AuthProvider = ({ children }) => {
       email: email,
     });
   };
-  const addItem = () => {
-    return addDoc(itemCollectionRef, {});
+  const addCategory = (category) => {
+    return (
+      addDoc(categoryCollectionRef),
+      {
+        title: category,
+      }
+    );
   };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -78,8 +83,8 @@ export const AuthProvider = ({ children }) => {
     updatePassword,
     createUser,
     userCollectionRef,
-    itemCollectionRef,
-    addItem,
+    addCategory,
+    categoryCollectionRef,
   };
 
   return (
